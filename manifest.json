@@ -1,0 +1,28 @@
+{
+    "manifest_version": 3,
+    "name": "YouTube Toots",
+    "version": "0.1",
+    "description": "Just following along to the YouTube toot",
+    "background": {
+        "service_worker": "background.js"
+    },
+    "permissions": [
+        "tabs"
+    ],
+    "content_scripts": [
+        {
+            "matches": ["<all_urls>"],
+            "js": [
+                "index.js",
+                "popup.js"
+            ]
+        }
+    ],
+    "action": {
+        "default_popup": "popup.html",
+        "css": [
+            "popup.css"
+        ]
+    }
+}
+
